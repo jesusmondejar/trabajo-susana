@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Responsive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-blue-600">MiLogo</a>
+
+            <!-- Menú de Navegación -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-700 hover:text-blue-600">Inicio</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Servicios</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Sobre Nosotros</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Contacto</a>
+            </nav>
+
+            <!-- Botón de Inicio de Sesión -->
+            <a href="#" class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                Iniciar Sesión
+            </a>
+
+            <!-- Botón de menú para móviles -->
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                ☰
+            </button>
+        </div>
+
+        <!-- Menú móvil (oculto por defecto) -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md p-4">
+            <a href="#" class="block text-gray-700 py-2">Inicio</a>
+            <a href="#" class="block text-gray-700 py-2">Servicios</a>
+            <a href="#" class="block text-gray-700 py-2">Sobre Nosotros</a>
+            <a href="#" class="block text-gray-700 py-2">Contacto</a>
+            <a href="#" class="block bg-blue-600 text-white text-center py-2 rounded-lg mt-2 hover:bg-blue-700">
+                Iniciar Sesión
+            </a>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
